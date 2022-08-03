@@ -1,8 +1,8 @@
-base_lab/.terraform.lock.hcl
-base_lab/k8s-course-351222-6e96ea1fdc37.json
-base_lab/terraform.tfstate
-base_lab/.terraform/modules/modules.json
-base_lab/.terraform/providers/registry.terraform.io/hashicorp/local/2.2.3/darwin_amd64/terraform-provider-local_v2.2.3_x5
-base_lab/.terraform/providers/registry.terraform.io/hashicorp/tls/3.1.0/darwin_amd64/terraform-provider-tls_v3.1.0_x5
-base_lab/terraform.tfstate.backup
-base_lab/.terraform/providers/registry.terraform.io/hashicorp/google/3.5.0/darwin_amd64/terraform-provider-google_v3.5.0_x5
+terraform.tfstate
+terraform/.terraform.lock.hcl
+terraform/k8s-course-351222-6e96ea1fdc37.json
+terraform/terraform.tfstate.backup
+terraform/.terraform/modules/modules.json
+terraform/.terraform/providers/registry.terraform.io/hashicorp/google/3.5.0/darwin_amd64/terraform-provider-google_v3.5.0_x5
+terraform/.terraform/providers/registry.terraform.io/hashicorp/local/2.2.3/darwin_amd64/terraform-provider-local_v2.2.3_x5
+terraform/.terraform/providers/registry.terraform.io/hashicorp/tls/3.1.0/darwin_amd64/terraform-provider-tls_v3.1.0_x5
