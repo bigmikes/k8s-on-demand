@@ -1,8 +1,10 @@
 #!/bin/bash
 set -ex
 
+PATH_TO_GCP_CRED_FILE=$(realpath $1)
+
 cd terraform 
-terraform init && terraform apply -auto-approve
+terraform init && terraform apply -auto-approve -var="credential_file_path=$PATH_TO_GCP_CRED_FILE"
 
 sleep 30
 
@@ -28,4 +30,4 @@ while IFS='=' read -ra WORKER_NODES_INFO; do
   ssh -n -o "StrictHostKeyChecking no" -i .ssh/google_compute_engine ${WORKER_NODES_INFO[0]}@${WORKER_NODES_INFO[1]} "sudo $JOIN_COMMAND"
 done <<< "$WORKER_NODES_IP"
 
-echo "Login to control node via ssh -o \"StrictHostKeyChecking no\" -i .ssh/google_compute_engine ${CONTROL_NODES_INFO[0]}@${CONTROL_NODES_INFO[1]}"
+echo "Login to control node via ssh -o \"StrictHostKeyChecking no\" -i terraform/.ssh/google_compute_engine ${CONTROL_NODES_INFO[0]}@${CONTROL_NODES_INFO[1]}"

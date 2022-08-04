@@ -1,3 +1,7 @@
+variable "credential_file_path" {
+  type    = string
+}
+
 variable "region" {
   type    = string
   default = "us-central1"

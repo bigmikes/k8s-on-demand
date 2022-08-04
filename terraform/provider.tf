@@ -12,7 +12,7 @@ terraform {
 }
 
 provider "google" {
-  credentials = file("k8s-course-351222-6e96ea1fdc37.json")
+  credentials = file(var.credential_file_path)
 
   project = "k8s-course-351222"
   region  = "us-central1"
